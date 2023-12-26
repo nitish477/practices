@@ -1,0 +1,45 @@
+.contanier{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 5rem 0px;
+}
+.sub-contanier{
+ width: 45%;
+ height: 70vh;
+ margin: 10px 20px;
+ padding: 5px 10px;
+ background: white;
+ box-shadow: 0 0 5px 2px #ccc;
+ border: 1px solid black;
+ border-radius: 30px;
+ overflow: scroll;
+}
+::-webkit-scrollbar{
+  width: 1px;
+}
+.input-contanier{
+  margin: 20px auto;
+  width: fit-content;
+}
+.mt{
+  margin-top: 5rem;
+}
+.btn-contanier{
+  margin: 10px auto;
+  width: fit-content;
+}
+.title{
+  font-size: 25px;
+  font-weight: 600;
+  background: rgb(139, 73, 201);
+  padding: 10px 20px;
+  margin: 20px auto;
+  width: 200px;
+  border-radius: 30px;
+  text-align: center;
+ position: sticky;
+ top: 5px;
+ color: white;
+}

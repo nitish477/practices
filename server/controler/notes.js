@@ -50,6 +50,32 @@ const fetchData = async (req, res) => {
     }
 }
 
+
+const getById = async(req,res)=>{
+    const {_id}=req.params
+
+    try{
+        const getData= await Note.findById(_id)
+        if(!getData){
+            return res.status(404).json({
+               success:false,
+               message:'Id not match'
+            })
+
+        }
+        res.status(200).json({
+            success:true,
+            data:getData,
+            message:'Data Fetch'
+        })
+    }catch(err){
+        res.status(404).json({
+            success:false,
+            message:err.message
+        })
+    }
+}
+
 const deleteNote = async (req, res) => {
     const { _id } = req.params;
    try{
@@ -93,4 +119,4 @@ const updateNote= async(req,res)=>{
 }
 
 
-export {createNotes,updateNote,deleteNote,fetchData}
+export {createNotes,updateNote,deleteNote,fetchData,getById}
